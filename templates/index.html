@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>发送邮件</title>
+		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
+		<meta name="description" content="JS代码网提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../static/css/dropzone.css" />
+		<link rel="stylesheet" href="../static/css/dropzone.css" />
+		<link rel="stylesheet" href="../static/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../static/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="../static/css/common.css" />
+		<link rel="stylesheet" href="../static/css/base.css" />
+		<script src="../static/js/ace-extra.min.js"></script>
+	</head>
+
+	<body>
+     <!--头部导航模块-->
+<section class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li>磁县人民医院信息科&nbsp;-->&nbsp;&nbsp;&nbsp;</li>
+                    <li>
+                        <a href="#">请登录</a>&nbsp;
+                        <a href="#" class="style_red">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="dropzone" class="w">
+        <form action="//dummy.html" class="dropzone">
+            <div class="fallback">
+                <input name="file" type="file" multiple="" />
+            </div>
+            <div>
+                <input type="email">
+                <input type="submit">
+            </div>
+        </form>
+    </div><!-- PAGE CONTENT ENDS -->
+	
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="../static/js/dropzone.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="../static/js/ace-elements.min.js"></script>
+		<script src="../static/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			jQuery(function($){
+			
+			try {
+			  $(".dropzone").dropzone({
+			    paramName: "file", // The name that will be used to transfer the file
+			    maxFilesize: 0.5, // MB
+			  
+				addRemoveLinks : true,
+				dictDefaultMessage :
+				'<span class="bigger-150 bolder"><i class="icon-caret-right red"></i> Drop files</span> to upload \
+				<span class="smaller-80 grey">(or click)</span> <br /> \
+				<i class="upload-icon icon-cloud-upload blue icon-3x"></i>'
+			,
+				dictResponseError: 'Error while uploading file!',
+				
+				//change the previewTemplate to use Bootstrap progress bars
+				previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-details\">\n    <div class=\"dz-filename\"><span data-dz-name></span></div>\n    <div class=\"dz-size\" data-dz-size></div>\n    <img data-dz-thumbnail />\n  </div>\n  <div class=\"progress progress-small progress-striped active\"><div class=\"progress-bar progress-bar-success\" data-dz-uploadprogress></div></div>\n  <div class=\"dz-success-mark\"><span></span></div>\n  <div class=\"dz-error-mark\"><span></span></div>\n  <div class=\"dz-error-message\"><span data-dz-errormessage></span></div>\n</div>"
+			  });
+			} catch(e) {
+			  alert('Dropzone.js does not support older browsers!');
+			}
+			
+			});
+		</script>
+	</body>
+</html>
